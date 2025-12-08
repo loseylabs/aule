@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aule"
+version = "0.1.0"
+description = "A meta-evolutionary genetic algorithm framework"
+readme = "README.MD"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+    "torch>=2.0.0",
+    "matplotlib>=3.0.0",
+    "tqdm>=4.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aule*"]
+
